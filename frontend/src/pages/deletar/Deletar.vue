@@ -73,12 +73,16 @@ export default {
         axios.get('http://localhost:8000/api/candidato/'+this.id, {                
         })
         .then(response => {
+        if(sessionStorage.getItem('usuario')){
            this.nome = response.data.nome;
            this.email = response.data.email;
            this.idade = response.data.idade;
            this.linkedin = response.data.linkedin;
            this.tecnologias = response.data.tecnologias;
-            console.log(response.data)            
+           console.log(this.value)            
+            }else{
+          this.$router.push("/login").catch(()=>{});
+        }          
         })
       .catch(e => {
         alert("Erro! Tente novamente mais tarde!");

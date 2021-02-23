@@ -15,13 +15,13 @@ class UsuarioController extends Controller
       $data = $request->all();
 
 
-      $valiacao = Validator::make($data, [
+      $validacao = Validator::make($data, [
           'email' => 'required|string|email|max:255',
           'password' => 'required|string',
       ]);
 
-      if($valiacao->fails()){
-        return $valiacao->errors();
+      if($validacao->fails()){
+        return $validacao->errors();
       }
 
       if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password']])){

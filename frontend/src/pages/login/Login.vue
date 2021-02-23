@@ -9,7 +9,6 @@
                 <input type="text" placeholder="E-mail" v-model="email">
         <input type="password" placeholder="Senha" v-model="password">
         <button type="button" class="btn" v-on:click="login()">Entrar</button>
-        <router-link class="btn orange" to="/cadastro">Cadastre-se</router-link>
     </span>
    
 </login-template>

@@ -16,7 +16,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © {{ano || 2021}} Copyright {{logo || Site}}
+        © {{ano || 2021}} Copyright
         </div>
       </div>
     </footer>
@@ -36,5 +36,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;            /* Footer height */
+}
 </style>

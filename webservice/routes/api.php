@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\CandidatoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,8 @@ use App\Http\Controllers\UsuarioController;
 */
 
 Route::post('/login', [UsuarioController::class, 'login']);
+Route::post('/cadastro', [CandidatoController::class, 'cadastro']);
+Route::get('/lista', [CandidatoController::class, 'lista']);
+Route::get('/candidato/{id}', [CandidatoController::class, 'candidato']);
+Route::post('/atualizar/{id}', [CandidatoController::class, 'atualizar']);
+Route::delete('/deletar/{id}', [CandidatoController::class, 'deletar']);
