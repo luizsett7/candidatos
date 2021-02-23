@@ -13,10 +13,22 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@revolist/vue-datagrid": "^2.9.9",
     "axios": "^0.21.1",
-    "vue": "^2.5.2",
+    "beegridtable": "^1.3.0",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "vue": "^2.6.12",
+    "vue-bootstrap-table2": "^1.1.8",
+    "vue-bootstrap4-table": "^1.1.11",
+    "vue-datasource": "^2.0.7",
+    "vue-datatable": "^1.0.4",
+    "vue-datatables-net": "^1.4.1",
+    "vue-good-table": "^2.21.4",
     "vue-multiselect": "^2.1.6",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-table-component": "^1.9.2",
+    "vue-table-dynamic": "^0.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -61,6 +73,7 @@
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
+    "vuetable-2": "^2.0.0-beta.4",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
