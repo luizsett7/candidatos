@@ -13,7 +13,7 @@
       <input type="text" placeholder="Idade" value="" v-model="idade" />
       <input type="text" placeholder="linkedin" value="" v-model="linkedin" />
       <input
-        type="text"
+        type="hidden"
         placeholder="tecnologias"
         value=""
         v-model="tecnologias"
