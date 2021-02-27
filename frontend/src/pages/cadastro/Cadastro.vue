@@ -123,9 +123,9 @@ export default {
           .catch((e) => {
             alert("Erro! Tente novamente mais tarde!");
           });
-      }else {
-          this.$router.push("/login");
-        }
+      } else {
+        this.$router.push("/login");
+      }
     },
   },
 };

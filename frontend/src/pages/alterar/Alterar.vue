@@ -110,13 +110,13 @@ export default {
       let tec = this.tecnologias.split(",");
       this.value = JSON.stringify(this.value);
       this.value = this.value.replace(value.name, " ");
+      this.value = JSON.parse(this.value);    
       for (let i = 0; i < tec.length; i++) {
         this.value.push({
           name: tec[i].slice(tec.indexOf(",") + 1),
           code: "l" + i,
         });
       }
-      this.value = JSON.parse(this.value);
     },
     toggleSelected(value, id) {
       if (this.tecnologias == "") {
