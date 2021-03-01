@@ -43,7 +43,6 @@
 
 <script>
 import LoginTemplate from "@/templates/LoginTemplate";
-import axios from "axios";
 import Multiselect from "vue-multiselect";
 import Router from "vue-router";
 
@@ -78,8 +77,7 @@ export default {
   },
   methods: {
     cadastro() {
-      axios
-        .post("http://localhost:8000/api/atualizar/" + this.id, {
+      this.$http.post(this.$urlAPI + 'atualizar/' + this.id, {
           nome: this.nome,
           email: this.email,
           idade: this.idade,
@@ -135,8 +133,7 @@ export default {
     },
   },
   mounted() {
-    axios
-      .get("http://localhost:8000/api/candidato/" + this.id, {})
+    this.$http.get(this.$urlAPI + 'candidato/' + this.id, {})
       .then((response) => {
         if (sessionStorage.getItem("usuario")) {
           this.nome = response.data.nome;

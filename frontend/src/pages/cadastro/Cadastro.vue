@@ -36,7 +36,6 @@
 
 <script>
 import LoginTemplate from "@/templates/LoginTemplate";
-import axios from "axios";
 import Multiselect from "vue-multiselect";
 
 export default {
@@ -93,8 +92,7 @@ export default {
     },
     cadastro() {
       if (sessionStorage.getItem("usuario")) {
-        axios
-          .post("http://localhost:8000/api/cadastro", {
+        this.$http.post(this.$urlAPI + 'cadastro', {
             nome: this.nome,
             email: this.email,
             idade: this.idade,

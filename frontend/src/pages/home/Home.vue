@@ -228,7 +228,6 @@
 import Vue from "vue";
 import HomeTemplate from "@/templates/HomeTemplate";
 import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
-import axios from "axios";
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
@@ -292,8 +291,7 @@ export default {
   },
   mounted() {
     // Set the initial number of items
-    axios
-      .get("http://localhost:8000/api/lista")
+    this.$http.get(this.$urlAPI + 'lista')
       .then((response) => {
         if (sessionStorage.getItem("usuario")) {
           console.log(response.data[0].nome);
